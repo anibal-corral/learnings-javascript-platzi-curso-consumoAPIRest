@@ -7,11 +7,31 @@
     <title>Consuming API</title>
 </head>
 <body>
-    <h1>Random Cats</h1>
-    <img id="img1"width="200" alt="Random cat image">
-    <img id="img2"width="200" alt="Random cat image">
-    <img id="img3"width="200" alt="Random cat image">
-    <button onclick="reload()">Reload</button>
+    <h1>App Cats</h1>
+    <section id="randomCats">
+        <h2>Random Cats</h2>
+    <article>
+        <img id="img1"width="200" alt="Random cat image">
+        <button>Save</button>
+    </article>
+    <article>
+        <img id="img2"width="200" alt="Random cat image">
+        <button>Save</button>
+    </article>
+    <article>
+        <img id="img3"width="200" alt="Random cat image">
+        <button>Save</button>
+    </article>
+        <button onclick="reload()">Reload</button>
+    </section>
+    <section id="favoritesCats">
+        <h2>Favorite Cats</h2>
+        <article>
+            <img id="img4"width="200" alt="Cat Saved">
+            <button>Save</button>
+        </article>
+        
+    </section>
     <script src="main.js"></script>
 </body>
 </html>
