@@ -1,6 +1,11 @@
 const API_URL_RANDOM ="https://api.thecatapi.com/v1/images/search?api_key=88d8107a-c912-429a-b1f7-22658b889dba&limit=2";
 const API_URL_FAVORITES="https://api.thecatapi.com/v1/favourites?api_key=88d8107a-c912-429a-b1f7-22658b889dba";
-const API_URL_FAVORITES_DELETE=(id)=>`https://api.thecatapi.com/v1/favourites/${id}?api_key=88d8107a-c912-429a-b1f7-2265b889dba`;
+// const API_URL_FAVORITES_DELETE=(id)=>
+// `https://api.thecatapi.com/v1/favourites/${id}?api_key=88d8107a-c912-429a-b1f7-2265b889dba`
+// ;
+const API_URL_FAVORITES_DELETE=(id)=>
+"https://api.thecatapi.com/v1/favourites/"+id+"?api_key=88d8107a-c912-429a-b1f7-2265b889dba"
+;
 
 const spanError = document.getElementById("error");
 
@@ -36,8 +41,9 @@ async function loadFavoritesCats(){
             const article = document.createElement("article");
             const img = document.createElement("img");
             const btn = document.createElement("button");
+            btn.id="btn"+cat.id;
             const btnText = document.createTextNode("Delete Favorite Cat");
-
+console.log(cat);
             btn.appendChild(btnText);
             btn.onclick = ()=>deleteFavoriteCat(cat.id)
             img.src=cat.image.url;
@@ -73,7 +79,7 @@ console.log('URL Delete ', API_URL_FAVORITES_DELETE(id));
     const rest = await fetch(API_URL_FAVORITES_DELETE(id),{
         method:'DELETE',
         headers:{
-            "x-api-key":`88d8107a-c912-429a-b1f7-2265b889dba`
+            "X-API-KEY":"88d8107a-c912-429a-b1f7-2265b889dba"
         }
     });
     // console.log('Saving rest', rest);
