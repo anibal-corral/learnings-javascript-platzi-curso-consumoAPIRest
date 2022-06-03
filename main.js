@@ -1,4 +1,4 @@
-const API_URL ="https://api.thecatapi.com/v1/images/search?limit=3";
+const API_URL ="https://api.thecatapi.com/v1/images/search?api_key=88d8107a-c912-429a-b1f7-22658b889dba&limit=3";
 
 
 
