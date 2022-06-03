@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>App Cats</h1>
+    <span id="error"></span>
     <section id="randomCats">
         <h2>Random Cats</h2>
+        
     <article>
         <img id="img1"width="200" alt="Random cat image">
         <button>Save</button>
@@ -18,11 +20,7 @@
         <img id="img2"width="200" alt="Random cat image">
         <button>Save</button>
     </article>
-    <article>
-        <img id="img3"width="200" alt="Random cat image">
-        <button>Save</button>
-    </article>
-        <button onclick="reload()">Reload</button>
+        <button onclick="loadRandomCats()">Reload</button>
     </section>
     <section id="favoritesCats">
         <h2>Favorite Cats</h2>
